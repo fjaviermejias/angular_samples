@@ -9,6 +9,7 @@ import { DisplayComponent } from './components/display/display.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroesService } from './services/heroes.service';
+import { CalculatorService } from './services/calculator.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { HeroesService } from './services/heroes.service';
   imports: [
     BrowserModule, FormsModule, NgbModule
   ],
-  providers: [HeroesService],
+  providers: [HeroesService, CalculatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
