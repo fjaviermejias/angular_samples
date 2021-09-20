@@ -7,7 +7,11 @@ export class ApodService {
 
   constructor(public service: HttpClient) { }
 
-  getApodData(url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-06-24'): Observable<any> {
-    return this.service.get(url);
+  getApodData(dateString?:string): Observable<any> {
+    let myURL = 'https://api.nasa.gov/planetary/apod?api_key=tqz634Z1x0LiJzjbhSyUoExrZaGKLM0MG1VnROR6';
+    if(dateString !== undefined) {
+      myURL = myURL + '&date=' + dateString;
+    }
+    return this.service.get(myURL);
   }
 }

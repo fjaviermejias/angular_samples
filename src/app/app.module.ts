@@ -15,6 +15,7 @@ import { HeroesListComponent } from './components/heroes/heroes-list/heroes-list
 import { ApodComponent } from './components/apod/apod/apod.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApodService } from './services/apod.service';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ApodService } from './services/apod.service';
     ApodComponent
   ],
   imports: [
-    BrowserModule, FormsModule, NgbModule, HttpClientModule
+    BrowserModule, FormsModule, NgbModule, HttpClientModule, YouTubePlayerModule
   ],
   providers: [HeroesService, CalculatorService, ApodService],
   bootstrap: [AppComponent]
