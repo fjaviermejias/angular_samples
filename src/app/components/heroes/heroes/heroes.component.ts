@@ -9,33 +9,33 @@ import { HeroesService } from 'src/app/services/heroes.service';
 })
 export class HeroesComponent implements OnInit, OnDestroy {
 
-  newHeroName = '';
-  newHeroDescription = '';
-
   heroes: Hero[] = [];
+
+  hero: Hero = new Hero('','', 0);
 
   constructor(public service: HeroesService) { }
 
   ngOnInit(): void {
     console.log('creo el componente HeroesComponent');
     this.heroes = this.service.heroes;
-    this.newHeroName = this.service.newHeroName;
-    this.newHeroDescription = this.service.newHeroDescription;
+    this.hero = this.service.hero;
     
   }
 
   ngOnDestroy(): void {
     console.log('destruyo el componente HeroesComponent');
     this.service.heroes = this.heroes;
-    this.service.newHeroName = this.newHeroName;
-    this.service.newHeroDescription = this.newHeroDescription;
+    this.service.hero = this.hero;
   }
 
+  // this.heroes.push(new Hero(this.newHeroName,this.newHeroDescription,this.heroes.length));
+  handleNewHero(hero: Hero): void {
+    this.heroes.push(hero);
+  }
 
-  onClick() {
-    this.heroes.push(new Hero(this.newHeroName,this.newHeroDescription,this.heroes.length));
-    this.newHeroName = '';
-    this.newHeroDescription = '';
+  handleChange(hero: Hero): void {
+    console.log('handleChange (heroes): ' + hero);
+    this.hero = new Hero(hero.name, hero.description);
   }
 
 }

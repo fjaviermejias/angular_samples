@@ -13,6 +13,8 @@ export class HeroesService {
     new Hero('Hulk', 'Bruce Banner',5),
   ];
 
+  hero = new Hero('', '',0);
+
   newHeroName = '';
   newHeroDescription = '';
 

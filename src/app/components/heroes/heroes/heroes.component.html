@@ -1,0 +1,5 @@
+<div class="form-group">
+  <app-hero-form (onHeroAdded)="handleNewHero($event)" (onFormChanged)="handleChange($event)" [heroData]="hero"></app-hero-form>
+  <hr/>
+  <app-heroes-list [listOfHeroes]="heroes"></app-heroes-list>
+</div>
