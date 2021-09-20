@@ -16,6 +16,8 @@ import { ApodComponent } from './components/apod/apod/apod.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApodService } from './services/apod.service';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { BeersComponent } from './components/beers/beers/beers.component';
+import { BeersService } from './services/beers.service';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,13 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     HeroesComponent,
     HeroFormComponent,
     HeroesListComponent,
-    ApodComponent
+    ApodComponent,
+    BeersComponent
   ],
   imports: [
     BrowserModule, FormsModule, NgbModule, HttpClientModule, YouTubePlayerModule
   ],
-  providers: [HeroesService, CalculatorService, ApodService],
+  providers: [HeroesService, CalculatorService, ApodService, BeersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
