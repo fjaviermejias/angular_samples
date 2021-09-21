@@ -2,7 +2,7 @@
     <img class="card-img-top mx-auto" [src]="beer.imageUrl" alt="" style="width:60px;">
     <div class="card-body">
         <h4 class="card-title">{{beer.name | uppercase}}</h4>
-        <h5 class="card-title">{{beer.abv | currency}}</h5>
+        <h5 class="card-title">{{beer.abv | abv: 1}}</h5>
         <p class="card-text">{{beer.tagline}}</p>
     </div>
 </div>

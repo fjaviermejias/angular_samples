@@ -20,6 +20,7 @@ import { BeersComponent } from './components/beers/beers/beers.component';
 import { BeersService } from './services/beers.service';
 import { BeerCardComponent } from './components/beers/beer-card/beer-card.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { AbvPipe } from './pipes/abv.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     HeroesListComponent,
     ApodComponent,
     BeersComponent,
-    BeerCardComponent
+    BeerCardComponent,
+    AbvPipe
   ],
   imports: [
     BrowserModule, 
