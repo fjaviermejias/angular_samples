@@ -33,24 +33,14 @@ export class ApodComponent implements OnInit {
 
   processData(data: any): void {
     this.apod = data;
-    console.log(this.apod);
   }
 
   processError(error: any): void {
     console.log(error);
   }
 
-  // returns youtube id from url
-  getYoutubeId(): string {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = this.apod.url.match(regExp);
-    return match && match[2].length == 11 ? match[2] : '';
-  }
-
-
-  updateDate(date: NgbDateStruct): void {
-    console.log(date.year + '-' + date.month + '-' + date.day);
-    this.service.getApodData(date.year + '-' + date.month + '-' + date.day).subscribe(
+  dateChange(dateString: string): void {
+    this.service.getApodData(dateString).subscribe(
       (data) => { this.processData(data) },
       (error) => { this.processError(error) });
   }

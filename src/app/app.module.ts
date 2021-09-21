@@ -21,6 +21,8 @@ import { BeersService } from './services/beers.service';
 import { BeerCardComponent } from './components/beers/beer-card/beer-card.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { AbvPipe } from './pipes/abv.pipe';
+import { ShowApodComponent } from './components/apod/show-apod/show-apod.component';
+import { DateApodComponent } from './components/apod/date-apod/date-apod.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AbvPipe } from './pipes/abv.pipe';
     ApodComponent,
     BeersComponent,
     BeerCardComponent,
-    AbvPipe
+    AbvPipe,
+    ShowApodComponent,
+    DateApodComponent
   ],
   imports: [
     BrowserModule, 
