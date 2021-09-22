@@ -23,6 +23,9 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { AbvPipe } from './pipes/abv.pipe';
 import { ShowApodComponent } from './components/apod/show-apod/show-apod.component';
 import { DateApodComponent } from './components/apod/date-apod/date-apod.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { DateApodComponent } from './components/apod/date-apod/date-apod.compone
     BeerCardComponent,
     AbvPipe,
     ShowApodComponent,
-    DateApodComponent
+    DateApodComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule, 
@@ -46,7 +50,8 @@ import { DateApodComponent } from './components/apod/date-apod/date-apod.compone
     NgbModule, 
     HttpClientModule, 
     YouTubePlayerModule, 
-    NgxSliderModule
+    NgxSliderModule,
+    AppRoutingModule
   ],
   providers: [
     HeroesService, 

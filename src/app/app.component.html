@@ -1,31 +1,26 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Angular</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/calculator" routerLinkActive="active">Calculadora</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/heroes" routerLinkActive="active">Héroes</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/apod" routerLinkActive="active">Apod</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/beers" routerLinkActive="active">Cervezas</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
-    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-        <li [ngbNavItem]="1">
-          <a ngbNavLink>Calculadora</a>
-          <ng-template ngbNavContent>
-            <app-calculator></app-calculator>
-          </ng-template>
-        </li>
-        <li [ngbNavItem]="2">
-          <a ngbNavLink>Héroes</a>
-          <ng-template ngbNavContent>
-            <app-heroes></app-heroes>
-          </ng-template>
-        </li>
-        <li [ngbNavItem]="3">
-          <a ngbNavLink>Apod</a>
-          <ng-template ngbNavContent>
-            <app-apod></app-apod>
-          </ng-template>
-        </li>
-        <li [ngbNavItem]="4">
-          <a ngbNavLink>Cervezas</a>
-          <ng-template ngbNavContent>
-            <app-beers></app-beers>
-          </ng-template>
-        </li>
-      </ul>
-      
-      <div [ngbNavOutlet]="nav" class="mt-2"></div>
-      
+  <router-outlet></router-outlet>
 </div>
