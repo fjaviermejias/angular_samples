@@ -5,6 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class BeersService {
 
+  value = 3;
+  highValue = 4.6;
+
   constructor(public service: HttpClient) { }
 
   getBeersData(): Observable<any> {

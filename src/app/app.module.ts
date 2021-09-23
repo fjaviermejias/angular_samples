@@ -25,6 +25,7 @@ import { ShowApodComponent } from './components/apod/show-apod/show-apod.compone
 import { DateApodComponent } from './components/apod/date-apod/date-apod.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FormComponent } from './components/form/form/form.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AbvPipe,
     ShowApodComponent,
     DateApodComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule, 

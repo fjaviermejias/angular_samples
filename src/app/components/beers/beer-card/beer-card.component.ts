@@ -12,7 +12,6 @@ export class BeerCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.beer);
     
   }
 
