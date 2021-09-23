@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,7 @@ import { DateApodComponent } from './components/apod/date-apod/date-apod.compone
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormComponent } from './components/form/form/form.component';
+import { ReactiveFormComponent } from './components/form/reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -44,11 +45,13 @@ import { FormComponent } from './components/form/form/form.component';
     ShowApodComponent,
     DateApodComponent,
     PageNotFoundComponent,
-    FormComponent
+    FormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule, 
     FormsModule, 
+    ReactiveFormsModule,
     NgbModule, 
     HttpClientModule, 
     YouTubePlayerModule, 

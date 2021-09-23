@@ -1,0 +1,13 @@
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+    <label>First Name:
+        <input type="text" formControlName="name" required>
+    </label>
+    <div [hidden]="this.heroForm.controls.name.valid || this.heroForm.controls.name.untouched" class="alert alert-danger">
+        Name is required
+    </div>
+    <label>Last Name:
+        <input type="text" formControlName="description">
+    </label>
+
+    <button type="submit" [disabled]="!heroForm.valid">Submit</button>
+</form>
