@@ -9,10 +9,28 @@ import { CardModel } from 'src/app/model/cardmodel';
 export class TrivialCardComponent implements OnInit {
 
   @Input() data: CardModel = new CardModel();
-  
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleClick(answer: string): void {
+    this.data.responded = true;
+    this.data.userAnswer = answer;
+  }
+
+  getClass(answer: string): string {
+    if (!this.data.responded) {
+      return 'btn btn-primary btn-lg btn-block';
+    } else {
+      if(this.data.correctAnswer === answer) {
+        return 'btn btn-success btn-lg btn-block';
+      } else if(this.data.userAnswer === answer) {
+        return 'btn btn-danger btn-lg btn-block';
+      }
+    }
+    return 'btn btn-secondary btn-lg btn-block';
   }
 
 }

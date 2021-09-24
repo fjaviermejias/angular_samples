@@ -1,6 +1,7 @@
 <div class="card mt-2">
     <div class="card-body">
-        <h4 class="card-title">{{data.question}}</h4>
-        <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" *ngFor="let answer of data.answers">{{answer}}</button>
+        <h4 class="card-title" [innerHtml]="data.question"></h4>
+        <button type="button" [disabled]="data.responded" [class]="getClass(answer)" *ngFor="let answer of data.answers"
+            (click)="handleClick(answer)" [innerHtml]="answer"></button>
     </div>
 </div>

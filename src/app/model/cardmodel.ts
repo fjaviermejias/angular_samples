@@ -2,6 +2,9 @@ export class CardModel {
     question = '';
     answers: string[] = [];
     correctAnswer = '';
+    responded = false;
+    userAnswer = '';
+
     constructor(jsonCard?: any) {
         if (jsonCard !== undefined) {
             this.question = jsonCard.question;
