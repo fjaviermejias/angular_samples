@@ -27,6 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormComponent } from './components/form/form/form.component';
 import { ReactiveFormComponent } from './components/form/reactive-form/reactive-form.component';
+import { TrivialComponent } from './components/trivial/trivial/trivial.component';
+import { TrivialCardComponent } from './components/trivial/trivial-card/trivial-card.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { ReactiveFormComponent } from './components/form/reactive-form/reactive-
     DateApodComponent,
     PageNotFoundComponent,
     FormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    TrivialComponent,
+    TrivialCardComponent
   ],
   imports: [
     BrowserModule, 
